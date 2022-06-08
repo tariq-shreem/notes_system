@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use('/api/users/',require('./api/user.route'));
 app.use('/api/notes',require('./api/note.route'));
-app.get('*',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send('404 not found');
 })
 dbConnection();
